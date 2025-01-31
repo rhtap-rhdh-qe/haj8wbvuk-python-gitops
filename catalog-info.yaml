@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: haj8wbvuk-python-gitops
+  description: This is GitOps manifest for haj8wbvuk-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: haj8wbvuk-python
+    backstage.io/kubernetes-id: haj8wbvuk-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: haj8wbvuk-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:haj8wbvuk-python
